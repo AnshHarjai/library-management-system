@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- <form action="/action_page.php"> -->
-      <div class="container">
-        <h1>User Login</h1>
-        <p>Please enter your credentials</p>
-        <hr />
-
+    <div class="container">
+      <h1>User Login</h1>
+      <p>Please enter your credentials</p>
+      <hr />
+      <form
+        name="admin-login"
+        action="http://localhost/admin-login.php"
+        method="get"
+      >
         <label for="email"><b>Email</b></label>
         <input
           type="text"
@@ -31,13 +34,12 @@
           required
         />
         <button type="submit" class="registerbtn">Login</button>
-      </div>
+      </form>
+    </div>
 
-      <div class="container signin">
-        <p>Don't have an account?<a href="index.html">Sign up</a>.</p>
-        <p>Admin login: <a href="./admin_login.html">Sign in</a>.</p>
-      </div>
-    </form>
+    <div class="container signin">
+      <p>Don't have an account?<a href="index.html">Sign up</a>.</p>
+      <p>Admin login: <a href="./admin_login.html">Sign in</a>.</p>
+    </div>
   </body>
 </html>
- 

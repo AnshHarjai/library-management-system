@@ -1,7 +1,9 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     /* background-color: black; */
-    height: 100%;
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
 }
 
 * {
@@ -15,8 +17,7 @@ body {
 }
 
 /* Full-width input fields */
-input[type="text"],
-input[type="password"] {
+input {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -25,8 +26,7 @@ input[type="password"] {
     background: #f1f1f1;
 }
 
-input[type="text"]:focus,
-input[type="password"]:focus {
+input:focus {
     background-color: #ddd;
     outline: none;
 }
@@ -62,4 +62,9 @@ a {
 .signin {
     background-color: #f1f1f1;
     text-align: center;
+}
+
+/* Keep footer at bootom of page */
+.container.signin {
+    margin-top: auto;
 }

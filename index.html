@@ -1,17 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- <form action="/action_page.php"> -->
-      <div class="container">
-        <h1>Register</h1>
-        <p>Please fill in this form to create an account.</p>
-        <hr />
+    <div class="container">
+      <h1>Register</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr />
+
+      <form
+        name="usr-signup"
+        action="http://localhost/usr-signup.php"
+        method="get"
+      >
+        <label for="name"><b>Name</b></label>
+        <input
+          type="text"
+          placeholder="Enter Name"
+          name="name"
+          id="name"
+          required
+        />
+
+        <label for="id"><b>Id</b></label>
+        <input
+          type="number"
+          placeholder="Enter ID"
+          name="id"
+          id="id"
+          required
+        />
+
+        <label for="contact-number"><b>Contact Number</b></label>
+        <input
+          type="number"
+          placeholder="Enter contact number"
+          name="contact-number"
+          id="contact-number"
+          required
+        />
+
+        <label for="dob"><b>Date of birth</b></label>
+        <input
+          type="date"
+          placeholder="Enter d-o-b"
+          name="dob"
+          id="dob"
+          required
+        />
 
         <label for="email"><b>Email</b></label>
         <input
@@ -46,13 +86,12 @@
         </p>
 
         <button type="submit" class="registerbtn">Register</button>
-      </div>
+      </form>
+    </div>
 
-      <div class="container signin">
-        <p>Already have an account? <a href="./usr_login.html">Sign in</a>.</p>
-        <p>Admin login: <a href="./admin_login.html">Sign in</a>.</p>
-      </div>
-    </form>
+    <div class="container signin">
+      <p>Already have an account? <a href="./usr_login.html">Sign in</a>.</p>
+      <p>Admin login: <a href="./admin_login.html">Sign in</a>.</p>
+    </div>
   </body>
 </html>
- 
