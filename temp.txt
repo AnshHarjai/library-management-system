@@ -1,0 +1,39 @@
+<?php
+$host = "localhost";
+$user = "root";
+$password = "";
+$dbname = "library";
+$con = mysqli_connect($host, $user, $password, $dbname);
+
+$name = $_GET['name'];
+$id = $_GET['id'];
+$number = $_GET['contact-number'];
+// $dob = $_GET['dob'];
+$email = $_GET['email'];
+$psw = $_GET['psw'];
+$psw_rep = $_GET['psw-repeat'];
+
+// echo "hi $name $id $number $dob $email $psw $psw_rep";
+
+if($psw != $psw_rep) {
+    echo "Passwords do not match!!";
+    return;
+}
+
+if (!$con)
+die("connection issue" . mysqli_connect_error());
+else
+echo "connection successfull<br>";
+
+echo "$name $id $number $email $psw<br>";
+$sql = "INSERT INTO student(name, id, number, email, password)
+        VALUES('$name', $id, $number, '$email', '$psw')";
+
+if ($con->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $con->error;
+}
+mysqli_close($con);
+	
+?>

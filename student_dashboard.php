@@ -10,19 +10,21 @@
   <body>
     <div class="container">
       <div class="header">Header Content</div>
-      <h1>Admin Dashboard</h1>
+      <h1>Student Dashboard</h1>
       <div class="content">
         <div class="up">
           <div class="action">
-            <a href="./admin/issued.html">Issued Books</a>
+            <a href="./student/issue.php">Issue Books</a>
           </div>
           <div class="action">
-            <a href="./admin/requested.html">Requested Books</a>
+            <a href="./student/request.php">Request Books</a>
           </div>
         </div>
         <div class="down">
-          <div class="action"><a href="./admin/order.html">Order Books</a></div>
-          <div class="action"><a href="./admin_login.html">Logout</a></div>
+          <div class="action">
+            <a href="./student/return.php">Return Books</a>
+          </div>
+          <div class="action"><a href="./usr_login.php">Logout</a></div>
         </div>
       </div>
       <div class="footer">Ansh Harjai</div>

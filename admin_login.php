@@ -7,13 +7,23 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+
+  <?php
+    $msg = "";
+    if(!empty($_REQUEST['msg'])){
+      $msg=$_REQUEST['msg'];
+    }
+  ?>
+
+
     <div class="container">
       <h1>Admin Login</h1>
+      <label for="invalid"><?php echo $msg?></label>
       <p>Please enter your credentials</p>
       <hr />
       <form
         name="admin-login"
-        action="http://localhost/admin-login.php"
+        action="login_server_admin.php"
         method="get"
       >
         <label for="email"><b>Email</b></label>
@@ -38,8 +48,8 @@
     </div>
 
     <div class="container signin">
-      <p>Don't have an account?<a href="index.html">Sign up</a>.</p>
-      <p>User login: <a href="./usr_login.html">Sign in</a>.</p>
+      <p>Don't have an account?<a href="index.php">Sign up</a>.</p>
+      <p>User login: <a href="usr_login.php">Sign in</a>.</p>
     </div>
   </body>
 </html>
